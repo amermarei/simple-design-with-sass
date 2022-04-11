@@ -1,0 +1,22 @@
+.container {
+    padding: 15px ;
+    margin: 0 auto;
+    position: relative;}
+    @include query(small){
+        .container {
+             width: 740px;
+         } 
+     }
+     @include query(medium){
+        .container {
+           width: 970px;
+       }
+   }
+   @include query(large){
+    .container {
+        width: 1170px;
+    } 
+}
+
+
+

@@ -1,0 +1,61 @@
+//  queries 
+@mixin query($point) {
+    @if $point =="mobile" {
+        @media (max-width:767px) {
+            .container {
+                width: 740px;
+            }
+        }
+    }
+    @if $point =="small" {
+        @media (min-width:768px) and (max-width:991px)  {
+           @content
+        }
+    }
+    @if $point =="medium" {
+        @media (min-width:991px) and (max-width:1199px) {
+           @content
+        }
+    }
+    @if $point =="large" {
+        @media (min-width:1200px) {
+          @content
+        }
+    }
+}
+//  over-lay 
+@mixin overlay($color , $alpha) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba($color, $alpha);
+}
+//  prefixer 
+@mixin prefixer($properity,$value,$prefixes:()){
+    @each $perfix in $prefixes {
+        #{"-" + $perfix+ "-"+ $properity} : $value ;
+    } 
+    #{$properity} : $value ;
+}
+//  animation 
+@mixin keyFrame($animy-name){
+   @keyframes #{$animy-name}{
+        @content 
+    }
+}
+//  flexs
+@mixin flexer {
+    display: flex;
+    align-items: center;
+}
+//  link style
+@mixin link {
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px 15px;
+    color: white;
+}

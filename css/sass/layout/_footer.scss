@@ -1,0 +1,105 @@
+.footer {
+    background-color: #ddd;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        @media #{$maxsmall} {
+            flex-direction: column;
+            align-items: center;
+        }
+        gap: 30px;
+        .box {
+            h2 {
+                font-weight: normal;
+                text-transform: capitalize;
+                font-size: 22px;
+            }
+            @media #{$maxsmall} {
+                text-align: center;
+           }
+        }
+        .box.blog {
+            .content {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 30px;
+                @media #{$maxsmall} {
+                    flex-direction: column;
+               }
+                img {
+                    width: 100px;
+                    height: 100px;
+                    max-width: 100%;
+                    border: 2px solid white;
+                }
+                h4 {
+                    margin: 0;
+                    color:$main-color;
+                }
+                p {
+                    margin: 10px 0;
+                    color: $pcolor;
+                    line-height: 1.5;
+                }
+            }
+
+        }
+    }
+    .box.details {
+        width: 405px;
+        @media #{$maxsmall} {
+             text-align: center;
+        }
+        h4 {
+            color: $pcolor;
+            line-height: 1.5;
+            margin: 10px 0;
+            font-weight: normal;
+           
+        }
+        h3 {
+            margin: 33px 0 5px ;
+        }
+
+    }
+    .box.contact {
+        form {
+            .email {
+                width: 90%;
+                margin-bottom: 15px;
+                border: none;
+                padding: 15px;
+                &::placeholder {
+                    text-transform: capitalize;
+                }
+                &:focus {
+                    outline: none;
+                }
+                @media #{$maxsmall} {
+                    width: 60%;
+               }
+            }
+            input[type="submit"]{
+                background-color: $main-color;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 6px;
+                display: block;
+                @media #{$maxsmall} {
+                    margin: 0px auto;
+               }
+            }
+            textarea{
+                height: 70px;
+            }
+        }
+    }
+    .lince{
+        text-align: center;
+        margin: 0;
+        padding: 15px;
+        border: 2px solid #ccc;
+    }
+}

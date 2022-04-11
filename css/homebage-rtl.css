@@ -1,0 +1,16 @@
+/*start header*/
+@media (max-width:991px) {
+  header .logo {
+    left: 107px;
+    right: auto;
+  }
+}
+header .navbar i.baricon {
+  right: auto;
+  left: 15px;
+}
+
+/*start services*/
+.srv i {
+  margin-left: 10px;
+}

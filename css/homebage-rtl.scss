@@ -1,0 +1,36 @@
+@import "sass/helpers/variables";
+$direction:rtl;
+/*start header*/ 
+
+
+header {
+
+    .logo {
+        @media #{$maxsmall} {
+            left: 107px;
+            right: auto;
+       }
+
+    }
+    .navbar {
+        i.baricon {
+            right: auto;
+            left: 15px;
+
+        }
+
+   
+}
+}
+
+
+
+/*start services*/ 
+.srv {
+
+        i {
+            margin-left: 10px;
+        }
+
+
+}
